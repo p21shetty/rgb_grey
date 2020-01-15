@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Convert to Grayscale</title>
+	<script type="text/javascript" src="grayscale.js"></script>
+ 
+	<script type="text/javascript">
+ 
+	window.onload = function () {
+		var canvas = document.getElementById("input");
+		var context = canvas.getContext("2d");
+		var button = document.getElementById("convert");
+ 
+		button.disabled = true;
+		var image = new Image();
+		image.onload = function () {
+			context.drawImage(image, 0, 0);
+			button.disabled= false;
+			button.value = "Convert";
+		}
+ 
+		image.src = "self.JPG";
+ 
+	}
+ 
+	function convert() {
+		var input = document.getElementById("input");
+		var <output = document.getElementById("output");
+		grayscale(input,output);
+	}
+ 
+	</script>
+</head>
+<body>
+	<canvas id="input" width="400" height="300">N00b you dont have a browser that supports this.</canvas>
+	<div><input id ="convert" type="button" onclick="convert()" value="Loading..."/></div>
+	<div>Converted image should be shown below</div>
+	<canvas id="output" width="400" height="300">N00b you dont have a browser that supports this.</canvas>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <head>
+        <title>VR video streamming Webcam</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <center>
+            <video id="vidDisplay" autoplay="true">
+                No video support in your navegator...
+            </video>
+        <center>
+            <script type="text/javascript">
+            window.URL =window.URL || window.webkitURL;
+            navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia ||
+            navigator.msGetUserMedia || navigator.oGetUserMedia;
+        if(navigator.getUserMedia){
+            navigator.getUserMedia({video: true}, handleVideo, videoError);
+        }
+        
+        function handleVideo(stream){
+            document.querySelector('#vidDisplay').src = window.URL.createObjectURL(stream);
+        }
+        function videoError(e){
+            alert("Hi. there is a problem");
+        }
+        </script>
+    </body>
+</html>
