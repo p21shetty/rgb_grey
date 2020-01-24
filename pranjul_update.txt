@@ -1,0 +1,5 @@
+hi, I just wanted to update you on the progress. I was working along one of the examples in M:\Arbeitsverzeichnis\OE120\hls_shared\14_Automatic_Tool_Wear_Detection\code\onnxjs-master\examples\browser\u-net_tool_wear
+
+The ouput and input dimensions of the 'model-220-0.828470.onnx' model are (1, 512, 512, 1) and (1, 512, 512, 3) respectively where input is an rgb image and ouput is a grayscale mask.
+
+I am not able to generate the output mask because I don't know much js. I guess you can work that out. I am going to India till 8th Jan. If you need any help you can contact me on whatsapp +4915146895272. 
